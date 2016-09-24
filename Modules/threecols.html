@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+      html,body{
+        margin: 0;
+        padding:0;
+        font-size: 14px;
+      }
+      header{
+        width:100%;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        background: rgba(254, 255, 119, 0.61);
+      }
+      aside{
+        width:200px;
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        left: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background: rgba(51, 255, 119, 0.44);
+        z-index: 1;
+      }
+      .main{
+        position: absolute;
+        top:100px;
+        bottom: 0;
+        width:100%;
+        padding-left:220px;
+        margin-left: -220px;
+        background: rgba(255, 34, 153, 0.19);
+      }
+      .main p{
+        padding-left: 220px ;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>高度为100px</p>
+      <p>宽度100%</p>
+      <p>固定在视窗顶部</p>
+      <p>颜色为#feff77</p>
+    </header>
+    <aside>
+      <p>侧栏导航</p>
+      <p>高度100%-header</p>
+      <p>宽度200px</p>
+      <p>颜色#33ff77</p>
+    </aside>
+    <section class="main">
+      <p>占据除header和aside的区域</p>
+      <p>颜色#FF2299</p>
+    </section>
+  </body>
+</html>
