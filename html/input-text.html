@@ -16,9 +16,24 @@
         -webkit-box-shadow: 0 0 2px #ccc; -moz-box-shadow: 0 0 2px #ccc; box-shadow: 0 0 2px #ccc;
         border: 1px solid #2e66cc;
       }
+      .btn{
+        padding: 1em 2em;
+        color: #fff;
+        background: #0955f4;
+        border: 1px solid #1335f4;
+      }
+      .btn:focus{
+        background: #1a19fa;
+        outline:none;
+        border: 1px solid #1335f4;
+      }
     </style>
   </head>
   <body>
     <input type="text" class="keywords" placeholder="类文本框">
+    <a class="btn" href="">搜索</a><br>
+    <button class="btn">搜索</button><br>
+    <input type="submit" value="提交" class="btn"><br>
+    <input type="reset" value="重置" class="btn">
   </body>
 </html>
