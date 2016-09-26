@@ -2,41 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Transverse Nav 01</title>
+    <title>Portrait Nav 01</title>
     <link rel="stylesheet" type="text/css" href="../../css/base.css">
     <style type="text/css">
-      .list{
-        font-size: 0;
-        -ms-text-size-adjust: none;
-        -moz-text-size-adjust: none;
-        -webkit-text-size-adjust: none;
-      }
-      .list > .list-item{
-        display: inline-block;
-        vertical-align: top;
-        font-size: 13px;
-      }
-      .list > .list-item > a{
-        border-left: 1px solid #ccc;
-      }
-      .list > .list-item:first-child > a{
-        border-left: none;
-      }
-      .sub-list{
-        display: none;
-        -webkit-transition: height .5s linear; -moz-transition: height .5s linear;  -o-transition: height .5s linear; transition: height .5s linear;
-      }
-      .sub-list .list-item{
-        border-left: none;
-        border-top: 1px solid #ccc;
-      }
-      .sub-list .list-item:first-child{
-        border:none;
+      nav{
+        width:91px;
+        overflow: hidden;
+        height:auto;
       }
       ul li a{
         display: inline-block;
         padding:1em 2em 1em 1em;
         background: #fee;
+      }
+      .list .list-item{
+        border-top: 1px solid #ccc;
+      }
+      .list > .list-item:first-child{
+        border-top: 0;
+      }
+      .sub-list{
+        display: none;
       }
     </style>
   </head>
@@ -73,16 +59,16 @@
     </nav>
     <script type="text/javascript">
       var lists = document.getElementsByClassName('list-item');
-      for(var i = 0;i < lists.length;i++){
+      for(var i = 0; i < lists.length; i++){
         lists[i].onmousemove = function (){
-          if(this.querySelector('.sub-list')){
+          if (this.querySelector('.sub-list')) {
             this.querySelector('.sub-list').style.display = 'block';
           }
         };
         lists[i].onmouseout = function (){
-          if(this.querySelector('.sub-list')){
-            this.querySelector('.sub-list').style.display = 'none';
-          }
+            if(this.querySelector('.sub-list')){
+              this.querySelector('.sub-list').style.display = 'none';
+            }
         };
       }
     </script>
