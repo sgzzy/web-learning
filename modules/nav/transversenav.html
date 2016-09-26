@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Transverse Nav</title>
+    <link rel="stylesheet" type="text/css" href="../../css/base.css">
+    <style type="text/css">
+      .list{
+        font-size: 0;
+        -ms-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+      }
+      .list > .list-item{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+      }
+      .list > .list-item > a{
+        border-left: 1px solid #ccc;
+      }
+      .list > .list-item:first-child > a{
+        border-left: none;
+      }
+      .sub-list{
+        display: none;
+        -webkit-transition: height .5s linear; -moz-transition: height .5s linear;  -o-transition: height .5s linear; transition: height .5s linear;
+      }
+      .sub-list .list-item{
+        border-left: none;
+        border-top: 1px solid #ccc;
+      }
+      .sub-list .list-item:first-child{
+        border:none;
+      }
+      ul li a{
+        display: block;
+        padding:1em 2em 1em 1em;
+        background: #fee;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="list">
+        <li class="list-item"><a href="">首页</a></li>
+        <li class="list-item"><a href="">关于公司</a>
+          <ul class="sub-list">
+            <li class="list-item"><a href="">公司简介</a></li>
+            <li class="list-item"><a href="">公司文化</a></li>
+            <li class="list-item"><a href="">公司资质</a></li>
+            <li class="list-item"><a href="">发展历程</a></li>
+          </ul>
+        </li>
+        <li class="list-item"><a href="">公司新闻</a>
+          <ul class="sub-list">
+            <li class="list-item"><a href="">公司简介</a></li>
+            <li class="list-item"><a href="">公司文化</a></li>
+            <li class="list-item"><a href="">公司资质</a></li>
+            <li class="list-item"><a href="">发展历程</a></li>
+          </ul>
+        </li>
+        <li class="list-item"><a href="">主营业务</a>
+          <ul class="sub-list">
+            <li class="list-item"><a href="">公司简介</a></li>
+            <li class="list-item"><a href="">公司文化</a></li>
+            <li class="list-item"><a href="">公司资质</a></li>
+            <li class="list-item"><a href="">发展历程</a></li>
+          </ul></li>
+        <li class="list-item"><a href="">人才招聘</a></li>
+        <li class="list-item"><a href="">联系我们 </a></li>
+      </ul>
+    </nav>
+    <script type="text/javascript">
+      var lists = document.getElementsByClassName('list-item');
+      for(var i = 0;i < lists.length;i++){
+        lists[i].onmousemove = function (){
+          if(this.querySelector('.sub-list')){
+            this.querySelector('.sub-list').style.display = 'block';
+          }
+        };
+        lists[i].onmouseout = function (){
+          if(this.querySelector('.sub-list')){
+            this.querySelector('.sub-list').style.display = 'none';
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
