@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML5 不兼容元素</title>
+  </head>
+  <body>
+    <details>
+      <!--查看该元素兼容性http://caniuse.com/#search=details-->
+      <summary>兼容性</summary>
+      <p>IE、Opera不兼容Firefox49后兼容，Chrome兼容，Safari部分支持，</p>
+      <p>
+        以下为不推荐使用的元素：<br>
+        acronym
+        applet
+        basefont
+        bgsound
+        big
+        blink
+        center
+        dir
+        embed
+        font
+        frame
+        frameset
+        hgroup
+        isindex
+        listing
+        marquee
+        multicol
+        nextid
+        nobr
+        noembed
+        noframes
+        plaintext
+        spacer
+        strike
+        tt
+        xmp
+      </p>
+    </details>
+    <command type="command">所有浏览器都不支持（只有IE9支持），实践证明，目前IE9也不支持</command>
+    <input list="browsers" title="">
+    <datalist id="browsers">
+      <option value="IE10+支持"></option>
+      <option value="Firefox、chrome、Opera支持"></option>
+      <option value="Safari不支持"></option>
+    </datalist>
+    <p>对话框<dialog open>这个是打开的对话框</dialog></p>
+    <embed src="../images/top-left-01.png">只有IE支持</embed><br>
+    仅IE不支持：<keygen name="security" ></keygen>
+
+  </body>
+</html>
